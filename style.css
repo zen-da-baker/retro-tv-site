@@ -9,6 +9,18 @@ html {
 
 .btn {
     font-size: 2rem;
+
+    border: 0.25rem solid black;
+    box-shadow: 0.5rem 0.5rem white;
+
+    border-radius: 0.5rem;
+}
+.btn:hover {
+    opacity: 0.8;
+}
+.btn:active {
+    translate: 0.5rem 0.5rem;
+    box-shadow: 0 0 white;
 }
 
 #main {
