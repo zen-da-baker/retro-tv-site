@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+#main {
+    background-color: white;
+
+    position: absolute;
+
+    border-radius: 1rem;
+
+    left: 31%;
+    top: 17%;
+
+    width: 47%;
+    height: 70%;
+
+    border: 0.25rem solid black;
+
+    overflow: scroll;
+}
+
+#tv {
+    width: 100vw;
+}
