@@ -11,23 +11,25 @@
         <title>Retro TV Website</title>
     </head>
 
-    <body>
-        <button class="btn" id="channelUp">Channel +</button>
-        <button class="btn" id="channelDown">Channel -</button>
+    <body onload="app()">
+        <div id="container">
+            <button class="btn" id="channelUp" onclick="increaseChannel()">Channel +</button>
+            <button class="btn" id="channelDown" onclick="decreaseChannel()">Channel -</button>
 
-        <main id="main">
+            <main id="main">
 
-            <!--
-            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ySvIneBa1uM?si=PIZ1c9og1Qh2O-ls" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerpolicy="strict-origin-when-cross-origin" 
-                allowfullscreen>
-            </iframe>
-            -->
+                <!--
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ySvIneBa1uM?si=PIZ1c9og1Qh2O-ls" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
+                -->
 
-        </main>
+            </main>
 
-        <img src="Illustration135.jpg" alt="Retro TV" id="tv" />
+            <img src="Illustration135.jpg" alt="Retro TV" id="tv" />
+        </div>
     </body>
 </html>

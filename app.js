@@ -16,34 +16,31 @@ const channels = [dbz, JFKSpeech, drumCorp, starWars, halo, fireEmblem, pokemon]
 
 let i = 0;
 
-function app() {
-    function increaseChannel() {
+function increaseChannel() {
+        
+    if (i >= channels.length - 1) {
+        i = 0;
+    } else {
         i++;
-
-        if (i >= channels.length) {
-            i = 0;
-        }
-
-        app();
-        
-        channelUp.removeEventListener("click", increaseChannel);
     }
 
-    function decreaseChannel() {
+    app();    
+}
+
+function decreaseChannel() {
+
+    if (i <= 0) {
+        i = channels.length - 1;
+    } else {
         i--;
-
-        if (i < 0) {
-            i = channels.length - 1;
-        }
-
-        app();
-        
-        channelDown.removeEventListener("click", decreaseChannel);
     }
 
-    channelUp.addEventListener("click", increaseChannel);
+    app();
+}
 
-    channelDown.addEventListener("click", decreaseChannel)
+function app() {
+
+    console.log('channel: ' + i);
 
     main.innerHTML = `
             <iframe width="100%" height="100%" src="${embed + channels[i]}" 
@@ -51,15 +48,5 @@ function app() {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
             </iframe>`
+
 }
-
-document.addEventListener("onload", app());
-
-/*
-main.innerHTML = `
-            <iframe width="100%" height="100%" src="${embed + channels[i]}" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen>
-            </iframe>`
-*/
